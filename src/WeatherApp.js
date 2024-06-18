@@ -49,6 +49,7 @@ const WeatherApp = () => {
 
     return (
         <div>
+            <LanguageSwitcher />
             <input
                 type="text"
                 value={city}

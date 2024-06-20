@@ -39,7 +39,7 @@ const WeatherApp = () => {
         const getWeatherData = async () => {
             setLoading(true);
             try {
-                const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9ba6ce0196b42b189d5a8a33aaa888f9&units=metric`);
+                const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9ba6ce0196b42b189d5a8a33aaa888f9&units=imperial`);
 
                 if (res.status === 200) {
                     SetWeatherData(res.data);

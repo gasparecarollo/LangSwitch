@@ -6,6 +6,7 @@ import { initReactI18next } from 'react-i18next';
 import translationEN from "./locales/en/translation.json";
 import translationFR from "./locales/fr/translation.json";
 import translationES from "./locales/es/translation.json";
+import translationITA from "./locales/ita/translation.json";
 import LanguageSwitcher from './LanguageSwitcher';
 const resources = {
     en: {
@@ -16,6 +17,9 @@ const resources = {
     },
     es: {
         translation: translationES,
+    },
+    ita: {
+        translation: translationITA,
     },
 };
 
@@ -85,8 +89,8 @@ const WeatherApp = () => {
 
                 <>
                     <h2> {t("weather_forecast_for")} : {weatherData.name}</h2>
-                    <p> {t("current_temperature")} : {weatherData.main?.temp}</p>
-                    <p> {t("feels_like")} : {weatherData.main?.feels_like}</p>
+                    <p> {t("current_temperature")} : {weatherData.main?.temp}  °F </p>
+                    <p> {t("feels_like")} : {weatherData.main?.feels_like} °F</p>
                     <p>{t("humidity")} : {weatherData.main?.humidity}</p>
                 </>
             )}
